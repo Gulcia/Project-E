@@ -1,3 +1,8 @@
+@import "customVariables";
+
+@import "colors";
+
+
 //zmienne
 
 $basic-font-size: 12px;
@@ -6,12 +11,12 @@ $paragraph-margin: 0 0 15px;
 
 
 //nagłówki
-@mixin header-mixin ($header-font-size,$header-margin-bootom,$header-color:$basic-header-color) {
+@mixin header-mixin ($header-font-size,$header-margin-bootom,$header-color: $basic-header-color) {
   font-size: $header-font-size;
-  margin-top:0;
-  margin-left:0;
-  margin-right:0;
-  margin-bottom:$header-margin-bootom;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: $header-margin-bootom;
   color:$header-color;
   font-weight:300;
 }

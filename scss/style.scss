@@ -14,8 +14,8 @@
 
 //inne elementy
 img{
-  max-widt:100%;
-  wertical-align: middle;
+  max-width:100%;
+  vertical-align: middle;
 }
 a {
   text-decoration: none;
@@ -56,7 +56,7 @@ header{
   right: 0;
   background-color: $background-light-white-color;
   .navbar {
-    hight: 90px;
+    height: 65px;
     .nav-logo{
       @include float-left;
       @include center-vertical;
@@ -77,9 +77,9 @@ header{
         font-size: 14px;
         font-family: $font-family-primary;
         font-weight: 300;
-        padding: 20px 40 px;
+        padding: 20px 40px;
         line-height: 20px;
-        @include basic-transition
+        @include basic-transition;
         &:hover{
           color: $buton-green-color;
         }
