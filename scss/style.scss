@@ -1,0 +1,89 @@
+@import "helpers";
+@import "typography";
+@import "colors";
+
+//kontener
+
+.container{
+  max-width: 1400px;
+  margin:0 auto;
+  clear: both;
+  padding: 0 15px;
+
+}
+
+//inne elementy
+img{
+  max-widt:100%;
+  wertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sction-title {
+  margin-bottom: 40px;
+  h1, h2,p{
+  @include center-text;}
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+//przyciski
+
+@mixin basic-button ($color,$bg-color){
+  color: $color;
+  background-color: $bg-color;
+  text-decoration: none;
+  font-size: $basic-font-size;
+  font-wight: 300;
+  line-height: $basic-line-height;
+  @include inline-block;
+}
+
+//nagłówek
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $background-light-white-color;
+  .navbar {
+    hight: 90px;
+    .nav-logo{
+      @include float-left;
+      @include center-vertical;
+      z-index: -50;
+      }
+  }
+}
+.main-menu-content {
+  @include float-right;
+  @include center-vertical;
+  ul {
+    @include list-style-no;
+    li {
+      @include float-left;
+      @include block;
+      a {
+        color: $basic-text-color;
+        font-size: 14px;
+        font-family: $font-family-primary;
+        font-weight: 300;
+        padding: 20px 40 px;
+        line-height: 20px;
+        @include basic-transition
+        &:hover{
+          color: $buton-green-color;
+        }
+      }
+    }
+  }
+}
