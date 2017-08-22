@@ -66,8 +66,8 @@
                 <div class="section-product-find single-col">
                     <img src="img/lupka.png" height="50" width="50"/>
                     <div class="section-title3">
-                    <h2>Compare, filter and find anything</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        <h2>Compare, filter and find anything</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <!-- Benefity -->
@@ -117,79 +117,170 @@
             </div>
         </div>
 
-        <!-- Cena -->
-        <div class="pricing">
-            <div class="container">
-                <!-- Wybór wersji -->
-                <div class="pricing-version">
-                    <h1>Pricing</h1>
-                    <table>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <h2>Free</h2>
-                                <h1>0zł</h1>
-                                <span>Free for as long as you want</span>
-                                <p>This plan includes basic functionality to get you going. Get this one for however long you want!</p>
-                            </td>
-                            <td>
-                                <h2>Proo</h2>
-                                <h1>20zł</h1>
-                                <span>Per active user, per month, billed annually. 30 zł billed monthly</span>
-                                <p>All of current and future features. Get full functionality today!</p>
-                                <a href="#"></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>feature/td>
-                            <td>
-                                <img src="img/odhaczenie.png" height="25" width="25"/>
-                            </td>
-                            <td>
-                                <img src="img/odhaczenie.png" height="25" width="25"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>feature</td>
-                            <td></td>
-                            <td>
-                                <img src="img/odhaczenie.png" height="25" width="25"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>feature</td>
-                            <td></td>
-                            <td>
-                                <img src="img/odhaczenie.png" height="25" width="25"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>feature</td>
-                            <td></td>
-                            <td>
-                                <img src="img/odhaczenie.png" height="25" width="25"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>feature</td>
-                            <td></td>
-                            <td>
-                                <img src="img/odhaczenie.png" height="25" width="25"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><a href="#">get free plan</a></td>
-                            <td><a href="#">get the free trial</a></td>
-                        </tr>
-                    </table>
+    <!-- Cena -->
+    <!-- proponuję poczytać o BEM i jak działa to z Sassem – ułatwia pracę i ujednolica nazewnictwo pryz pisaniu struktury storny. -->
+    <div class="plan-table">
+        <!-- tag h1 powinien być uzyty tylko taz na danej podstronie – kwestja google'a i pozycjonowania, więc proponuję uywania h2/h3 itd -->
+        <h2 class="plan-table__header">Choose your plan</h2>
+        <!-- span zamiast p jeśli to nie jest właściwy paragraf tekstu – SEO -->
+        <span class="plan-table__sub-header">Instructions</span>
+        <div class="plan-table__element">
+            <div class="plan-element">
+                <span class="plan-element__name">Free</span>
+                <span class="plan-element__price">0zł</span>
+                <span class="plan-element__subheader">Free as long as you want.</span>
+                <span class="plan-element__description">This plan includes basic functionality to get you going. Get this one for however long you want!</span>
+                <div class="plan-element__feature-list hidden">
+                    <!-- element z aktywną ikoną mona robić na kilka sposobów, albo dodawać klasę active dla 'feature-list__element' albo kontrolując ikonę bezpośrednio – ja wolę bezpośrednio -->
+                    <div class="feature-list__element">
+                        <span class="feature__description">feature</span>
+                        <img src="#" alt="check icon" class="feature__icon-green">
+                    </div>
+                    <div class="feature-list__element">
+                        <span class="feature__description">feature with longer name</span>
+                        <img src="#" alt="check icon" class="feature__icon-blank">
+                    </div>
+                    <div class="feature-list__element">
+                        <span class="feature__description">feature number 3</span>
+                        <img src="#" alt="check icon" class="feature__icon-blank">
+                    </div>
+                    <div class="feature-list__element">
+                        <span class="feature__description">simple feature</span>
+                        <img src="#" alt="check icon" class="feature__icon-blank">
+                    </div>
+                    <div class="feature-list__element">
+                        <span class="feature__description">this feature is simply amazeballs, it even has two lines of text!</span>
+                        <img src="#" alt="check icon" class="feature__icon-blank">
+                    </div>
+                    <div class="feature-list__element">
+                        <span class="feature__description">feature</span>
+                        <img src="#" alt="check icon" class="feature__icon-blank">
+                    </div>
                 </div>
+                <button class="plan-element__button-bare expand-button">show features</button>
+                <button class="plan-element__button-secondary choose-button">get free plan</button>
+            </div>
+        </div>
+        <div class="plan-table__element">
+            <div class="plan-element">
+                <span class="plan-element__name">Pro</span>
+                <span class="plan-element__price">20zł</span>
+                <span class="plan-element__subheader">Per active user, per month.</span>
+                <span class="plan-element__description">All of current and future features. <br/> Get full functionality today!</span>
+                <button class="plan-element__button--bare--green"></button>
+                <div class="plan-element__feature-list hidden">
+                    <div class="feature-list__element">
+                        <span class="feature__description">feature</span>
+                        <img src="#" alt="check icon" class="feature__icon-green">
+                    </div>
+                    <div class="feature-list__element">
+                        <span class="feature__description">feature with longer name</span>
+                        <img src="#" alt="check icon" class="feature__icon-blank">
+                    </div>
+                    <div class="feature-list__element">
+                        <span class="feature__description">feature number 3</span>
+                        <img src="#" alt="check icon" class="feature__icon-blank">
+                    </div>
+                    <div class="feature-list__element">
+                        <span class="feature__description">simple feature</span>
+                        <img src="#" alt="check icon" class="feature__icon-blank">
+                    </div>
+                    <div class="feature-list__element">
+                        <span class="feature__description">this feature is simply amazeballs, it even has two lines of text!</span>
+                        <img src="#" alt="check icon" class="feature__icon-blank">
+                    </div>
+                    <div class="feature-list__element">
+                        <span class="feature__description">feature</span>
+                        <img src="#" alt="check icon" class="feature__icon-blank">
+                    </div>
+                </div>
+                <button class="plan-element__button--bare expand-button">show features</button>
+                <button class="plan-element__button--secondary choose-button">get free plan</button>
+            </div>
+        </div>
+        <!-- plan-table__feature-list proponuję schować na mobilkach domyślnie, na netbookach i desktopach wyświetlić np. jako position:absolute; left: -100%; bottom: Xpx -->
+        <div class="plan-table__feature-list">
+            <div class="feature-list__element"><span class="feature__description">feature</span></div>
+            <div class="feature-list__element"><span class="feature__description">feature with longer name</span></div>
+            <div class="feature-list__element"><span class="feature__description">feature number 3</span></div>
+            <div class="feature-list__element"><span class="feature__description">simple feature</span></div>
+            <div class="feature-list__element"><span class="feature__description">this feature is simply amazeballs, it even has two lines of text!</span></div>
+            <div class="feature-list__element"><span class="feature__description">feature</span></div>
+        </div>
+    </div>
+
+    <div class="pricing">
+        <div class="container">
+            <!-- Wybór wersji -->
+            <div class="pricing-version">
+                <h2>Pricing</h2>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <h3>Free</h3>
+                            <h2>0zł</h2>
+                            <span>Free for as long as you want</span>
+                            <p>This plan includes basic functionality to get you going. Get this one for however long you want!</p>
+                        </td>
+                        <td>
+                            <h3>Pro</h3>
+                            <h2>20zł</h2>
+                            <span>Per active user, per month, billed annually. 30 zł billed monthly</span>
+                            <p>All of current and future features. Get full functionality today!</p>
+                            <a href="#"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>feature</td>
+                        <td>
+                            <img src="img/odhaczenie.png" height="25" width="25" />
+                        </td>
+                        <td>
+                            <img src="img/odhaczenie.png" height="25" width="25" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>feature</td>
+                        <td></td>
+                        <td>
+                            <img src="img/odhaczenie.png" height="25" width="25" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>feature</td>
+                        <td></td>
+                        <td>
+                            <img src="img/odhaczenie.png" height="25" width="25" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>feature</td>
+                        <td></td>
+                        <td>
+                            <img src="img/odhaczenie.png" height="25" width="25" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>feature</td>
+                        <td></td>
+                        <td>
+                            <img src="img/odhaczenie.png" height="25" width="25" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><a href="#">get free plan</a></td>
+                        <td><a href="#">get the free trial</a></td>
+                    </tr>
+                </table>
+            </div>
 
                 <!-- Pytania -->
                 <div class="pricing-questions">
                     <div class="container">
                         <div class="section-title">
-                            <h1>Questions?</h1>
+                            <h2>Questions?</h2>
                             <p>Let us know!</p>
                         </div>
                         <div class="pricing-form">
@@ -219,27 +310,27 @@
                 <div class="pricing-recommendations">
                     <div class="container">
                         <div class="section-title">
-                            <h1>See what others think about PE:</h1>
+                            <h2>See what others think about PE:</h2>
                         </div>
 
                     <!--pojedyncza opinia-->
 
                         <div class="section-title">
-                            <h1>Testimonial</h1>
+                            <h2>Testimonial</h2>
                             <p>“Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.”</p>
                             <p>– Jake Smith, Something Company</p>
                         </div>
                         <!--pojedyncza opinia-->
 
                         <div class="section-title">
-                            <h1>Testimonial</h1>
+                            <h2>Testimonial</h2>
                             <p>“Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.”</p>
                             <p>– Jake Smith, Something Company</p>
                         </div>
                         <!--pojedyncza opinia-->
 
                         <div class="section-title">
-                            <h1>Testimonial</h1>
+                            <h2>Testimonial</h2>
                             <p>“Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.”</p>
                             <p>– Jake Smith, Something Company</p>
                         </div>
